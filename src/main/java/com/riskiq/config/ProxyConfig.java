@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
 public class ProxyConfig {
 
     private String userFile;
+    private String serviceOwnerFile;
 
     public String getUserFile() {
         return userFile;
@@ -22,4 +23,7 @@ public class ProxyConfig {
     public void setUserFile(String userFile) {
         this.userFile = userFile;
     }
+
+    public String getServiceOwnerFile() {return serviceOwnerFile;}
+    public void setServiceOwnerFile(String serviceOwnerFile) {this.serviceOwnerFile = serviceOwnerFile;}
 }

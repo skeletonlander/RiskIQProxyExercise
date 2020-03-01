@@ -1,6 +1,7 @@
 package com.riskiq;
 
 import com.riskiq.config.ProxyConfig;
+import com.riskiq.repository.ServiceOwnerRepository;
 import com.riskiq.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -21,6 +22,11 @@ public class ProxyApplication {
 	@Bean
 	UserRepository userRepository() {
 		return new UserRepository(Resources.getResource(proxyConfig.getUserFile()));
+	}
+
+	@Bean
+	ServiceOwnerRepository serviceOwnerRepository() {
+		return new ServiceOwnerRepository(Resources.getResource(proxyConfig.getServiceOwnerFile()));
 	}
 
 	public static void main(String[] args) {
