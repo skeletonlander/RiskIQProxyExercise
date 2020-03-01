@@ -1,6 +1,7 @@
 package com.riskiq.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Component;
 
 /**
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @ConfigurationProperties(value = "riskiq.proxy")
+@EnableScheduling
 public class ProxyConfig {
 
     private String userFile;
